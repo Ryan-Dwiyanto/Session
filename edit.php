@@ -3,11 +3,13 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form action="" method="post">
         <label for="nama">Nama : </label>
@@ -18,7 +20,7 @@ session_start();
         <input type="text" id="rayon" name="rayon"><br><br>
         <button type="submit" value="kirim" name="edit">Edit</button><br>
     </form>
-    <?php 
+    <?php
     if (isset($_POST['edit'])) {
         $data = array(
             'nama' => $_POST['nama'],
@@ -29,6 +31,7 @@ session_start();
         echo "Data berhasil diubah";
         header("Location: form.php");
     }
-        ?>
+    ?>
 </body>
+
 </html>
