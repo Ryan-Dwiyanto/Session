@@ -77,7 +77,7 @@ session_start();
             );
 
             if ($data['nama'] == "" || $data['nis'] == "" || $data['rayon'] == "") {
-                echo "Data tidak boleh kosong";
+                echo '<p class="allert">Isi Form Terlebih Dahulu</p>';
             } else {
                 array_push($_SESSION["data"], $data);
             }

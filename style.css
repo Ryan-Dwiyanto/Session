@@ -60,5 +60,11 @@ button{
     text-align: right;
 }
 
-
+.allert {
+    color: white;
+    background-color: red;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
 
