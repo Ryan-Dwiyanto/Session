@@ -27,9 +27,15 @@ session_start();
             'nis' => $_POST['nis'],
             'rayon' => $_POST['rayon']
         );
-        $_SESSION["data"][$_SESSION['i']] = $data;
-        echo "Data berhasil diubah";
-        header("Location: form.php");
+        if ($data['nama'] == "" || $data['nis'] == "" || $data['rayon'] == "") {
+            echo '<p class="allert">Isi Form Terlebih Dahulu</p>';
+        } elseif ($_SESSION["data"][$_SESSION['i']] == $data) {
+            echo '<p class="allert">Data Tidak Berubah</p>';
+        } else {
+            $_SESSION["data"][$_SESSION['i']] = $data;
+            echo "Data berhasil diubah";
+            header("Location: form.php");
+        }
     }
     ?>
 </body>

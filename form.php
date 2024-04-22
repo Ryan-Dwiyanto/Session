@@ -75,7 +75,6 @@ session_start();
                 'nis' => $_POST['nis'],
                 'rayon' => $_POST['rayon']
             );
-
             if ($data['nama'] == "" || $data['nis'] == "" || $data['rayon'] == "") {
                 echo '<p class="allert">Isi Form Terlebih Dahulu</p>';
             } else {

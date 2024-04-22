@@ -12,7 +12,6 @@ session_start();
 
 <body>
     <?php
-
     echo '<table  border="1">';
     echo "<tr><th>NAMA SISWA  </th><th>NIS </th><th>RAYON </th></tr>";
     foreach ($_SESSION["data"] as $key => $value) {
@@ -22,12 +21,12 @@ session_start();
         echo "<td>" . $value['rayon'] . "</td>";
         echo "</tr>";
     }
-    ?>
-    <form action="" method="post">
+    echo '</table>';
+    echo '<form action="" method="post">
         <button type="submit" value="reset" name="reset">Reset</button>
         <button type="submit" value="kembali" name="kembali">Kembali</button>
-    </form>
-    <?php
+    </form>';
+
     if (isset($_POST["reset"])) {
         session_unset();
         session_destroy();
