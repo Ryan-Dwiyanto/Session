@@ -18,7 +18,8 @@ session_start();
         <input type="number" id="nis" name="nis"><br><br>
         <label for="rayon">Rayon : </label>
         <input type="text" id="rayon" name="rayon"><br><br>
-        <button type="submit" value="kirim" name="edit">Edit</button><br>
+        <button type="submit" value="kirim" name="edit">Edit</button>
+        <button type="submit" value="kirim" name="kembali">Kembali</button><br>
     </form>
     <?php
     if (isset($_POST['edit'])) {
@@ -36,6 +37,9 @@ session_start();
             echo "Data berhasil diubah";
             header("Location: form.php");
         }
+    }
+    if (isset($_POST['kembali'])) {
+        header("Location: form.php");
     }
     ?>
 </body>

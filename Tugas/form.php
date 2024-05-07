@@ -37,7 +37,7 @@ session_start();
                         <label for="nis">:</label>
                     </td>
                     <td class="input">
-                        <input type="number" id="nis" name="nis"><br>
+                        <input type="number" id="nis" name="nis" maxlength="8" minlength="8"><br>
                     </td>
                 </tr>
                 <tr>
